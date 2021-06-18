@@ -45,6 +45,11 @@ def logincheck():
     else:
         return redirect(url_for('login'))
 
+@app.route('/logout')
+def logout():
+    session.pop('login', None)
+    return redirect(url_for('index'))
+
 #アプリケーションの起動
 if __name__ == '__main__':
     app.run(debug=True)
