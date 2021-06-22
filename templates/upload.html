@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang='ja'>
+    <head>
+        <meta charset="utf-8">
+        <title>ファイルのアップロード</title>
+    </head>
+    <body>
+        <!-- アップロードされたファイルを/registerにPOSTメソッドで送信 -->
+        <form method="POST" action="/register" enctype="multipart/form-data">
+            <!-- アップロードするファイルのタイトル名を入力 -->
+            <h3>タイトル</h3><input type="text" name="title" size="20">
+            <!-- アップロードするファイルを登録する -->
+            <h3>ファイル</h3><input type="file" name="file">
+            <!-- 行間を開けるための改行タグ -->
+            <br>
+            <br>
+            <!-- 送信ボタンとリセットボタン。&nbsp;はスペース -->
+            <input value="送信" type="submit">&nbsp;<input value="リセット" type="reset">
+        </form>
+        <br>
+        <a href="/">Topに戻る</a>
+    </body>
+</html>
