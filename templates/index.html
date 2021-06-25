@@ -23,7 +23,7 @@
             <p>ファイル 【{{i.file_path[7:]}}】</p>
             <p>登録時間【{{i.dt}}】</p>
             <!-- /deleteにデータベースに登録されたidを付けてGETメソッドで送信 -->
-            <form method="GET" action="{{url_for{'delete', id=i.id}}">
+            <form method="GET" action="{{url_for('delete', id=i.id)}}">
                 <input value="削除" type='submit'>
             </form>
         {% else %}
