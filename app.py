@@ -28,7 +28,7 @@ db = SQLAlchemy(app)
 class Data(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(30), index=True, unique=True)
-    title_path = db.Column(db.String(64), index=True, unique=True)
+    file_path = db.Column(db.String(64), index=True, unique=True)
     dt = db.Column(db.DateTime, nullable=False, default=datetime.now)
 
 #テーブルの初期化
